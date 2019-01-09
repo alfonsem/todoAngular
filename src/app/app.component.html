@@ -1,0 +1,13 @@
+<!--<header>
+  <div>
+    <h1>Listado de tareas de Alfonso</h1>
+    <input class="text" placeholder="Añade una nueva tarea" (keyup)="addTarea($event)"/>
+  </div>
+</header>
+<section>
+  <h2>Mis tareas:</h2>
+  <p *ngFor="let tarea of tareas">{{tarea}}</p>
+</section>-->
+
+<app-crear-tarea (nuevaTarea)="addTarea($event)"></app-crear-tarea>
+<app-listado-tareas [arrData]="tareas"></app-listado-tareas>
