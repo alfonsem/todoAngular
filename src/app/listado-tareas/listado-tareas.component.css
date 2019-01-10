@@ -1,3 +1,28 @@
-p{
-    font-size: 2em;
+.misTareas{
+    text-align: center;
+}
+.contenedorTareas{
+    width: 100vw;
+    display:flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+.tarea{
+    text-align: justify;
+    background-color: white;
+    border-radius: 20px;
+    padding: 20px;
+    margin: 30px;
+    min-width: 200px;
+    min-height: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.contenedorCompletar{
+    background-color: white;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
 }

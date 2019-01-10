@@ -1,5 +1,4 @@
 import { Component } from '@angular/core';
-import { text } from '@angular/core/src/render3';
 
 @Component({
   selector: 'app-root',

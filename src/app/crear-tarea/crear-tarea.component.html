@@ -1,4 +1,6 @@
-<div>
+<div class="cabecera">
   <h1>Listado de tareas de Alfonso</h1>
-  <input class="text" placeholder="Añade una nueva tarea" [(ngModel)]="nuevaTareaTexto"  (keyup)="handleKeyup($event)"/>
+  <input type="text" placeholder="Añade una nueva tarea" [(ngModel)]="nuevaTareaTexto"  (keyup)="handleKeyup($event)"/>
+  <input type="text" placeholder="Busca una tarea"/>
+  <button type="button" class="buttonBorrarBusqueda">Borrar búsqueda</button>
 </div>
