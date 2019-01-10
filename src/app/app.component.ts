@@ -7,7 +7,14 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   tareas = [];
+  tareasFiltradas = [];
+  filtroTexto = '';
   addTarea(tareaTexto){
     this.tareas.push(tareaTexto);
+    this.filtrarTareas(this.filtroTexto);
+  }
+
+  filtrarTareas(filtroTexto){
+    this.tareasFiltradas = this.tareas.filter(tarea => tarea.match(filtroTexto));
   }
 }

@@ -9,5 +9,5 @@
   <p *ngFor="let tarea of tareas">{{tarea}}</p>
 </section>-->
 
-<app-crear-tarea (nuevaTarea)="addTarea($event)"></app-crear-tarea>
+<app-crear-tarea (nuevaTarea)="addTarea($event)" (filtroTarea)="filtrarTareas($event)"></app-crear-tarea>
 <app-listado-tareas [arrData]="tareas"></app-listado-tareas>
