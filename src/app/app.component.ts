@@ -8,13 +8,18 @@ import { Component } from '@angular/core';
 export class AppComponent {
   tareas = [];
   tareasFiltradas = [];
-  filtroTexto = '';
-  addTarea(tareaTexto){
+  filtroTexto: string = '';
+
+  addTarea(tareaTexto: string){
+    console.log('añadiendo....'+tareaTexto);
     this.tareas.push(tareaTexto);
     this.filtrarTareas(this.filtroTexto);
   }
 
-  filtrarTareas(filtroTexto){
-    this.tareasFiltradas = this.tareas.filter(tarea => tarea.match(filtroTexto));
+  filtrarTareas(filtroTexto: string){
+    console.log('filtrando....'+filtroTexto);
+    this.filtroTexto = filtroTexto;
+    this.tareasFiltradas = this.tareas.filter(tarea => tarea.match(this.filtroTexto));
+    console.log(this.tareasFiltradas);
   }
 }

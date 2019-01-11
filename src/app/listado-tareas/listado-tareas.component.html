@@ -1,8 +1,7 @@
 <section class="misTareas">
   <h2>Mis tareas:</h2>
   <div class="contenedorTareas">
-      <div class="tarea" *ngFor="let tarea of arrData; let i=index">
-        {{i+1 }}.{{tarea}}
+      <div class="tarea" *ngFor="let tarea of arrData">{{tarea}}
         <div class="contenedorCompletar">
           Completar <input type="checkbox" class="checkCompletar"/>
           <button>❌</button>
