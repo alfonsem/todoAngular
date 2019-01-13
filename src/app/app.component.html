@@ -2,4 +2,4 @@
 
 <app-filtrado-tareas (nuevoFiltro)="filtrarTareas($event)"></app-filtrado-tareas>
 
-<app-listado-tareas [arrData]="tareasFiltradas"></app-listado-tareas>
+<app-listado-tareas [arrData]="tareasFiltradas"  (alternarCompletada)="alternarCompletada($event)" (borrarTarea)="eliminarTarea($event)"></app-listado-tareas>

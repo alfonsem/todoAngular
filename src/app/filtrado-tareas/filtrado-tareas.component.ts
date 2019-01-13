@@ -7,10 +7,16 @@ import { Component, OnInit, EventEmitter, Output } from '@angular/core';
 })
 export class FiltradoTareasComponent implements OnInit {
   @Output() nuevoFiltro = new EventEmitter();
-  nuevoFiltroTexto: string = '';
+  @Output() reset = new EventEmitter();
+  nuevaBusquedaTexto: string = '';
 
   buscar() {
-    this.nuevoFiltro.emit(this.nuevoFiltroTexto);
+    this.nuevoFiltro.emit(this.nuevaBusquedaTexto);
+  }
+
+  borrar() {
+    this.reset.emit();
+    this.nuevaBusquedaTexto = '';
   }
 
   constructor() { }

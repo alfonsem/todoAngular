@@ -20,6 +20,18 @@
     flex-direction: column;
     justify-content: space-between;
 }
+.completada{
+    text-align: justify;
+    background-color: red;
+    border-radius: 20px;
+    padding: 20px;
+    margin: 30px;
+    min-width: 200px;
+    min-height: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
 .contenedorCompletar{
     background-color: white;
     display: flex;

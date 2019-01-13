@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'app-listado-tareas',
@@ -7,6 +7,15 @@ import { Component, OnInit, Input } from '@angular/core';
 })
 export class ListadoTareasComponent implements OnInit {
   @Input() arrData;
+  @Output() alternarCompletada = new EventEmitter();
+  @Output() borrarTarea = new EventEmitter();
+
+  emitirCambioCompletada(id) {
+    this.alternarCompletada.emit(id);
+  }
+  eliminar(id) {
+    this.borrarTarea.emit(id);
+  }
   constructor() { }
 
   ngOnInit() {
