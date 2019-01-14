@@ -1,11 +1,11 @@
-import { Component, OnInit, EventEmitter, Output } from '@angular/core';
+import { Component, EventEmitter, Output } from '@angular/core';
 
 @Component({
   selector: 'app-filtrado-tareas',
   templateUrl: './filtrado-tareas.component.html',
   styleUrls: ['./filtrado-tareas.component.css']
 })
-export class FiltradoTareasComponent implements OnInit {
+export class FiltradoTareasComponent {
   @Output() nuevoFiltro = new EventEmitter();
   @Output() reset = new EventEmitter();
   nuevaBusquedaTexto: string = '';
@@ -17,11 +17,6 @@ export class FiltradoTareasComponent implements OnInit {
   borrar() {
     this.reset.emit();
     this.nuevaBusquedaTexto = '';
-  }
-
-  constructor() { }
-
-  ngOnInit() {
   }
 
 }
