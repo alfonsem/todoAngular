@@ -8,13 +8,14 @@ import { Task } from './task.interface';
 })
 export class AppComponent {
   filtroTexto: string = '';
-  tareas: Array<Task> = [{ tareaTexto: 'Tarea de prueba', id: 0, completada: false }];
+  tareas: Array<Task> = JSON.parse(localStorage.getItem("tareas")) || []; //Intento cargar el array de localStorage o uno vacío
   tareasFiltradas: Array<Task> = this.tareas;
 
   addTarea(tareaTexto: string){
     console.log('añadiendo....'+tareaTexto);
     let newTask: Task = { tareaTexto, id: Date.now(), completada: false };
     this.tareas.push(newTask);
+    localStorage.setItem("tareas", JSON.stringify(this.tareas)); //Intento guardarlo en localStorage
     this.filtrarTareas(this.filtroTexto);
   }
 
@@ -37,6 +38,7 @@ export class AppComponent {
 
   eliminarTarea(id) {
     this.tareas = this.tareas.filter(tarea => tarea.id !== id);
+    localStorage.setItem("tareas", JSON.stringify(this.tareas)); //Intento guardarlo en localStorage
     this.filtrarTareas(this.filtroTexto);
   }
 }
