@@ -14,6 +14,6 @@ export class ListadoTareasComponent {
     this.alternarCompletada.emit(id);
   }
   eliminar(id) {
-    this.borrarTarea.emit(id);
+    this.borrarTarea.emit(id); /////
   }
 }
